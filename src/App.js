@@ -5,24 +5,16 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom'
-
-import { Navbar } from './app/Navbar'
+import CartPage from './page'
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <div className="App">
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <section>
-                <h2>Welcome to the Redux Essentials example app!</h2>
-              </section>
-            )}
-          />
+          <Route exact path="/">
+            <CartPage />
+          </Route>
           <Redirect to="/" />
         </Switch>
       </div>
